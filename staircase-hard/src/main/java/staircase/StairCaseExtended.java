@@ -35,4 +35,43 @@ public class StairCaseExtended {
 
         return count;
     }   
+
+    /**
+     * Gets the  ways to hop the stairs given
+     * you can hop any of of the values in hopIntervals at once
+     * 
+     * @param hopIntervals - set of positive integers defining the intervals of steps
+     *                       one can hop at once
+     *
+     *       For example, if hopIntervals = {1,3,5} the the hopper can jump
+     *       either 1, 3, or 5 steps per hop.
+     * 
+     * 
+     */ 
+    public List<List<Integer>> getWays(int steps, List<Integer> hopIntervals) {
+        List<List<Integer>> ways = 
+            new ArrayList<List<Integer>>();
+        
+        getWays(steps, new ArrayList<Integer>(), ways, hopIntervals);
+
+        return ways;
+    }
+
+    private void getWays(int steps, List<Integer> curr, List<List<Integer>> allPaths, List<Integer> hopIntervals) {
+        if( steps == 0 ){
+            allPaths.add(new ArrayList<Integer>(curr));
+            return;
+        }
+
+        if( steps < 0 ){
+            return;
+        }
+
+
+        for( Integer interval : hopIntervals ){
+            curr.add(interval);
+            getWays(steps-interval, curr, allPaths, hopIntervals);
+            curr.remove(curr.size()-1);
+        }
+    }
 }

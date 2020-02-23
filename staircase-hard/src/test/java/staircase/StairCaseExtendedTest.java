@@ -17,4 +17,22 @@ public class StairCaseExtendedTest {
         assertEquals(0, stairCase.countWays(4, Arrays.asList(3)));
         assertEquals(1, stairCase.countWays(4, Arrays.asList(2)));
     }
+
+    @Test public void test_GetWays() {
+        StairCaseExtended stairCase = new StairCaseExtended();
+        assertAndPrint(5, stairCase.getWays(4, Arrays.asList(1,2)));
+        assertAndPrint(3, stairCase.getWays(4, Arrays.asList(1,3)));
+        assertAndPrint(0, stairCase.getWays(4, Arrays.asList(3)));
+        assertAndPrint(1, stairCase.getWays(4, Arrays.asList(2)));
+    }
+
+    private void assertAndPrint(int expected, List<List<Integer>> ways){
+        assertEquals(expected, printAndReturn(ways).size());
+    }
+
+    private List<List<Integer>> printAndReturn(List<List<Integer>> ways){
+    	System.out.println(ways);
+    	return ways;
+    }
+
 }
