@@ -15,7 +15,6 @@ public class StairCaseExtendedTest {
         assertEquals(5, stairCase.countWays(4, Arrays.asList(1,2)));
         assertEquals(3, stairCase.countWays(4, Arrays.asList(1,3)));
         assertEquals(0, stairCase.countWays(4, Arrays.asList(3)));
-        assertEquals(0, stairCase.countWays(4, Arrays.asList(3)));
         assertEquals(1, stairCase.countWays(4, Arrays.asList(2)));
     }
 }
