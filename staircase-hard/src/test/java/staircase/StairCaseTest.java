@@ -14,4 +14,10 @@ public class StairCaseTest {
         StairCase stairCase = new StairCase();
         assertEquals(5, stairCase.countWays(4));
     }
+
+    @Test public void test_GetWays() {
+        StairCase stairCase = new StairCase();
+        List<List<Integer>> ways = stairCase.getWays(4);
+		assertEquals(5, ways.size());
+    }
 }

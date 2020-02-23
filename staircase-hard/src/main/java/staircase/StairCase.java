@@ -22,4 +22,40 @@ public class StairCase {
 
         return countWays(steps-1) + countWays(steps-2);
     }
+
+    /**
+     * Gets all of the ways to hop the stairs given
+     * you can hop either 1 or 2 stairs at a time
+     */ 
+    public List<List<Integer>> getWays(int steps) {
+    	List<List<Integer>> ways = 
+            new ArrayList<List<Integer>>();
+        
+        getWays(steps, new ArrayList<Integer>(), ways);
+
+        return ways;
+    }
+
+    private void getWays(int steps, List<Integer> curr, List<List<Integer>> allPaths) {
+    	if( steps == 0 ){
+    		allPaths.add(new ArrayList<Integer>(curr));
+    		return;
+    	}
+
+    	if( steps < 0 ){
+    		return;
+    	}
+
+        //Step once
+        curr.add(1);
+        getWays(steps-1, curr, allPaths);
+        curr.remove(curr.size()-1);
+
+        //Step twice
+        curr.add(2);
+        getWays(steps-2, curr, allPaths);
+        curr.remove(curr.size()-1);
+    }
+
+   
 }
