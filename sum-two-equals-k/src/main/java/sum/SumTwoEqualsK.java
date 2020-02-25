@@ -23,4 +23,20 @@ public class SumTwoEqualsK {
 
     }
    
-}
+   /**
+     * One pass solution using a set O(n) runtime with O(n) space
+     */
+    public boolean satisfiesOnePass(int[] nums, int k){
+        Set<Integer> seen = new HashSet<Integer>();
+        for(int i = 0; i < nums.length; i++){
+           if( seen.contains(k-nums[i]) ){
+                return true;
+           }
+           seen.add(nums[i]);
+        }
+        return false;
+
+    }
+   
+}      
+

@@ -13,9 +13,19 @@ public class SumTwoEqualsKTest{
        SumTwoEqualsK sum = new SumTwoEqualsK();
        assertTrue(sum.satisfiesBrute(new int[]{10, 15, 3, 7}, 17));
        assertTrue(sum.satisfiesBrute(new int[]{10, 7}, 17));
+       assertTrue(sum.satisfiesBrute(new int[]{10, -7, 3}, -4));
        assertFalse(sum.satisfiesBrute(new int[]{10,6}, 17));
 
        assertFalse(sum.satisfiesBrute(new int[]{1, 1, 1, 1}, 3));
+    }
+
+    @Test public void testSatisfiesOnePass() {
+       SumTwoEqualsK sum = new SumTwoEqualsK();
+       assertTrue(sum.satisfiesOnePass(new int[]{10, 15, 3, 7}, 17));
+       assertTrue(sum.satisfiesOnePass(new int[]{10, 7}, 17));
+       assertFalse(sum.satisfiesOnePass(new int[]{10,6}, 17));
+	   assertTrue(sum.satisfiesBrute(new int[]{10, -7, 3}, -4));
+       assertFalse(sum.satisfiesOnePass(new int[]{1, 1, 1, 1}, 3));
     }
 
     
