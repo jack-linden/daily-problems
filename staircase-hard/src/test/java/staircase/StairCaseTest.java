@@ -20,4 +20,15 @@ public class StairCaseTest {
         List<List<Integer>> ways = stairCase.getWays(4);
 		assertEquals(5, ways.size());
     }
+
+
+    @Test public void test_CountWaysDynamic() {
+        StairCase stairCase = new StairCase();
+        assertEquals(5, stairCase.countWaysDynamic(4));
+    }
+
+    @Test public void test_CountWaysDynamicConstantSpace() {
+        StairCase stairCase = new StairCase();
+        assertEquals(5, stairCase.countWaysDynamicConstantSpace(4));
+    }
 }
