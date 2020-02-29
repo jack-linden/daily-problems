@@ -1,6 +1,6 @@
 # daily-problems
-autocomplete-medium
-max-subarray-vals-of-len-k
-staircase-hard
-sum-two-equals-k
-TBD
+* autocomplete-medium
+* max-subarray-vals-of-len-k-hard
+* staircase-hard
+* sum-two-equals-k
+* linked-list-intesection
