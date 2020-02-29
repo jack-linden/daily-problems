@@ -3,12 +3,12 @@ package autocomplete;
 import java.util.*;
 
 /**
- * SimpleAutoCompleter
+ * EfficientAutoCompleter
  */
 public class EfficientAutoCompleter implements AutoCompleter {
     private Node dictionary;
     
-    //O(N*k) where K is max length of a word
+    //O(N*k) where k is max length of a word
     public EfficientAutoCompleter(Set<String> words){
          this.dictionary = new Node('*', false);
          

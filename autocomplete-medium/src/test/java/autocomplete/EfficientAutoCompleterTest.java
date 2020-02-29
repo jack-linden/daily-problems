@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * SimpleAutoCompleterTest
+ * EfficientAutoCompleterTest
  */
 public class EfficientAutoCompleterTest {
 
