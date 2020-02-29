@@ -15,4 +15,15 @@ repositories {
 }
 dependencies {
     testCompile 'junit:junit:4.12'
+
 }
+test {
+  beforeTest { descriptor ->
+     logger.lifecycle("Running test: " + descriptor)
+  }
+
+  testLogging {
+        showStandardStreams = true
+  }
+}
+
